@@ -11,7 +11,6 @@
   inputs.src-autonim-main.ref   = "refs/heads/main";
   inputs.src-autonim-main.owner = "Guevara-chan";
   inputs.src-autonim-main.repo  = "AutoNim";
-  inputs.src-autonim-main.dir   = "";
   inputs.src-autonim-main.type  = "github";
   
   outputs = { self, nixpkgs, flakeNimbleLib, ...}@deps:
