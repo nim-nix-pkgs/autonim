@@ -7,6 +7,14 @@
   inputs.flakeNimbleLib.type  = "github";
   inputs.flakeNimbleLib.inputs.nixpkgs.follows = "nixpkgs";
   
+  inputs."autonim-main".dir   = "main";
+  inputs."autonim-main".owner = "nim-nix-pkgs";
+  inputs."autonim-main".ref   = "master";
+  inputs."autonim-main".repo  = "autonim";
+  inputs."autonim-main".type  = "github";
+  inputs."autonim-main".inputs.nixpkgs.follows = "nixpkgs";
+  inputs."autonim-main".inputs.flakeNimbleLib.follows = "flakeNimbleLib";
+  
   outputs = { self, nixpkgs, flakeNimbleLib, ...}@inputs:
   let 
     lib  = flakeNimbleLib.lib;
